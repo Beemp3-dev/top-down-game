@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://85exjavna63y"]
+
+[ext_resource type="Texture2D" uid="uid://1qcn1x1bukst" path="res://grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg" id="1_u44n3"]
+[ext_resource type="Script" uid="uid://be1trbsiaigrg" path="res://player.gd" id="2_sb48q"]
+[ext_resource type="Texture2D" uid="uid://caybwa21g4d8l" path="res://Player.png" id="3_t88pq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r0x5m"]
+radius = 33.0606
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(576, 306)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(-3, -2)
+texture = ExtResource("1_u44n3")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_sb48q")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_r0x5m")
+
+[node name="Player_sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("3_t88pq")
