@@ -8,7 +8,7 @@
 radius = 33.0606
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(576, 306)
+position = Vector2(-4, 0)
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(-3, -2)
@@ -23,3 +23,7 @@ shape = SubResource("CircleShape2D_r0x5m")
 
 [node name="Player_sprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("3_t88pq")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.5
