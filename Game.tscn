@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://85exjavna63y"]
+[gd_scene load_steps=7 format=3 uid="uid://85exjavna63y"]
 
 [ext_resource type="Texture2D" uid="uid://1qcn1x1bukst" path="res://grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg" id="1_u44n3"]
 [ext_resource type="Script" uid="uid://be1trbsiaigrg" path="res://player.gd" id="2_sb48q"]
 [ext_resource type="Texture2D" uid="uid://caybwa21g4d8l" path="res://Player.png" id="3_t88pq"]
+[ext_resource type="Script" uid="uid://dqkgg1es1clrj" path="res://info chart.gd" id="4_sb48q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0x5m"]
 radius = 33.0606
 
+[sub_resource type="LabelSettings" id="LabelSettings_t88pq"]
+font_size = 30
+
 [node name="Node2D" type="Node2D"]
-position = Vector2(-4, 0)
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(-3, -2)
@@ -27,3 +30,15 @@ texture = ExtResource("3_t88pq")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 position_smoothing_speed = 3.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 34.0
+offset_top = 562.0
+offset_right = 167.0
+offset_bottom = 626.0
+mouse_default_cursor_shape = 2
+text = "speed"
+label_settings = SubResource("LabelSettings_t88pq")
+script = ExtResource("4_sb48q")
