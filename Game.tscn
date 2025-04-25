@@ -12,6 +12,7 @@ position = Vector2(576, 306)
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(-3, -2)
+scale = Vector2(-0.660485, 0.689737)
 texture = ExtResource("1_u44n3")
 
 [node name="Player" type="CharacterBody2D" parent="."]
