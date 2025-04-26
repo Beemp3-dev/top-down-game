@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1qcn1x1bukst"
-path="res://.godot/imported/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg-88907a67145f8c22a144308c63cb74ad.ctex"
+path="res://.godot/imported/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg-5c4baed078cb12ee5339ea9986593468.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg"
-dest_files=["res://.godot/imported/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg-88907a67145f8c22a144308c63cb74ad.ctex"]
+source_file="res://Assets/Background/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg"
+dest_files=["res://.godot/imported/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg-5c4baed078cb12ee5339ea9986593468.ctex"]
 
 [params]
 

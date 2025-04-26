@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://blu4slftdvq8f"]
+
+[ext_resource type="Script" uid="uid://be1trbsiaigrg" path="res://Code/player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://caybwa21g4d8l" path="res://Assets/Player/Player.png" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://bbvne0diyttkt" path="res://Code/camera zoom.gd" id="3_sweqy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hs0m"]
+radius = 33.0606
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_i3pqv")
+
+[node name="Hitbox" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_2hs0m")
+
+[node name="Player_sprite" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(0.675, 0.675)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 3.5
+script = ExtResource("3_sweqy")
