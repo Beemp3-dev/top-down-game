@@ -1,15 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://85exjavna63y"]
+[gd_scene load_steps=10 format=3 uid="uid://85exjavna63y"]
 
 [ext_resource type="Texture2D" uid="uid://1qcn1x1bukst" path="res://grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg" id="1_u44n3"]
 [ext_resource type="Script" uid="uid://be1trbsiaigrg" path="res://player.gd" id="2_sb48q"]
 [ext_resource type="Texture2D" uid="uid://caybwa21g4d8l" path="res://Player.png" id="3_t88pq"]
 [ext_resource type="Script" uid="uid://dqkgg1es1clrj" path="res://info chart.gd" id="4_sb48q"]
+[ext_resource type="Script" uid="uid://bbvne0diyttkt" path="res://camera zoom.gd" id="4_t88pq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0x5m"]
 radius = 33.0606
 
 [sub_resource type="LabelSettings" id="LabelSettings_t88pq"]
 font_size = 30
+shadow_size = 0
+
+[sub_resource type="Gradient" id="Gradient_t88pq"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.172833, 0.172833, 0.172833, 0.466667)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r0x5m"]
+gradient = SubResource("Gradient_t88pq")
+fill_from = Vector2(0, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,17 +38,31 @@ shape = SubResource("CircleShape2D_r0x5m")
 texture = ExtResource("3_t88pq")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.675, 0.675)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.5
+script = ExtResource("4_t88pq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 34.0
-offset_top = 562.0
-offset_right = 167.0
-offset_bottom = 626.0
+offset_left = 38.0
+offset_top = 546.0
+offset_right = 171.0
+offset_bottom = 678.0
+scale = Vector2(0.554303, 0.554303)
 mouse_default_cursor_shape = 2
-text = "speed"
+text = "Speed:
+Sprint:
+Zoom:"
 label_settings = SubResource("LabelSettings_t88pq")
 script = ExtResource("4_sb48q")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Label"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -35.0
+offset_top = -9.0
+offset_right = 230.0
+offset_bottom = 142.0
+texture = SubResource("GradientTexture2D_r0x5m")
