@@ -1,11 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://85exjavna63y"]
+[gd_scene load_steps=9 format=3 uid="uid://85exjavna63y"]
 
 [ext_resource type="Texture2D" uid="uid://1qcn1x1bukst" path="res://Assets/Background/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg" id="1_j5yw3"]
 [ext_resource type="Script" uid="uid://dqkgg1es1clrj" path="res://Code/info chart.gd" id="2_kldst"]
 [ext_resource type="PackedScene" uid="uid://blu4slftdvq8f" path="res://Scenes/player.tscn" id="3_b2bpf"]
-[ext_resource type="Script" uid="uid://bdqrnjhym8rlq" path="res://Scenes/texture_rect.gd" id="3_kldst"]
-[ext_resource type="FontFile" uid="uid://dvxc63ukugprr" path="res://Assets/UI/Fonts/Comfortaa-VariableFont_wght.ttf" id="4_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://tca4xbttj7e2" path="res://Scenes/enemy.tscn" id="6_7lihs"]
+
+[sub_resource type="SystemFont" id="SystemFont_kldst"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t88pq"]
+font = SubResource("SystemFont_kldst")
+font_size = 41
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 
 [sub_resource type="Gradient" id="Gradient_t88pq"]
 offsets = PackedFloat32Array(0)
@@ -14,13 +21,6 @@ colors = PackedColorArray(0.172833, 0.172833, 0.172833, 0.466667)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_r0x5m"]
 gradient = SubResource("Gradient_t88pq")
 fill_from = Vector2(0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_t88pq"]
-font = ExtResource("4_b2bpf")
-font_size = 56
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 0
 
 [node name="Node2D" type="Node2D"]
 
@@ -36,25 +36,31 @@ position = Vector2(318, 206)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-show_behind_parent = true
-offset_left = 2.0
-offset_top = 496.0
-offset_right = 267.0
-offset_bottom = 647.0
-texture = SubResource("GradientTexture2D_r0x5m")
-script = ExtResource("3_kldst")
-metadata/_edit_use_anchors_ = true
-
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 21.0
-offset_top = 501.0
-offset_right = 399.0
-offset_bottom = 755.0
+offset_left = 36.0
+offset_top = 497.0
+offset_right = 414.0
+offset_bottom = 751.0
 scale = Vector2(0.554303, 0.554303)
 mouse_default_cursor_shape = 2
 text = "Speed:
 Sprint:
-Zoom:"
+Zoom:
+Health:"
 label_settings = SubResource("LabelSettings_t88pq")
 script = ExtResource("2_kldst")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Label"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.000821472
+anchor_top = -0.000691331
+anchor_right = 0.282247
+anchor_bottom = 0.440254
+offset_left = -39.6895
+offset_top = -10.8244
+offset_right = 225.311
+offset_bottom = 140.176
+texture = SubResource("GradientTexture2D_r0x5m")
+metadata/_edit_use_anchors_ = true

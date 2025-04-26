@@ -10,7 +10,6 @@ func _physics_process(_delta): #Movement
 	velocity.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	velocity.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	velocity = velocity.normalized() * speed
-	look_at(get_global_mouse_position())
 	
 	if Input.is_action_pressed("sprint"): #Sprint
 		speed = 500
