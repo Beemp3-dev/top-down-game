@@ -13,6 +13,8 @@ config_version=5
 config/name="Top Down Game"
 run/main_scene="uid://85exjavna63y"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Assets/UI/Untitled.png"
 config/icon="res://Assets/Misc/icon.svg"
 
 [autoload]
