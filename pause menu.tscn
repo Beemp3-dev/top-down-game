@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://daemqyu7ac60o"]
+
+[ext_resource type="Script" uid="uid://q2jncldg8efd" path="res://resume.gd" id="1_ly55d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_we3ls"]
+font_size = 76
+outline_size = 8
+
+[sub_resource type="Gradient" id="Gradient_vslu3"]
+offsets = PackedFloat32Array(0.00649351, 1)
+colors = PackedColorArray(0.226707, 0.226707, 0.226707, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7l61g"]
+gradient = SubResource("Gradient_vslu3")
+width = 75
+height = 11
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+metadata/_snap_count = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_5jxrj"]
+font_size = 53
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(3.73013e-07, 0.379928, 0.135838, 0.407843)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 33.0
+offset_top = 20.0
+offset_right = 263.0
+offset_bottom = 125.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_we3ls")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 208.0
+offset_top = 206.0
+offset_right = 290.0
+offset_bottom = 246.0
+scale = Vector2(8.50554, 8.85206)
+
+[node name="resume" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = SubResource("GradientTexture2D_7l61g")
+alignment = 0
+script = ExtResource("1_ly55d")
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/resume"]
+layout_mode = 0
+offset_left = 31.744
+offset_top = 5.76137
+offset_right = 225.744
+offset_bottom = 78.7614
+scale = Vector2(0.0932195, 0.0932195)
+text = "resume"
+label_settings = SubResource("LabelSettings_5jxrj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/resume" to="CanvasLayer/VBoxContainer/resume" method="_on_pressed"]
