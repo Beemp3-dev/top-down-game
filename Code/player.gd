@@ -3,6 +3,7 @@ extends CharacterBody2D
 var health = 100
 var speed = 500
 var sprint = 300
+
 func _physics_process(_delta): #Movement
 	velocity = Vector2.ZERO
 	velocity.x = Input.get_action_strength("right") - Input.get_action_strength("left")
