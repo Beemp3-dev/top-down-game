@@ -6,4 +6,4 @@ func _process(_delta: float) -> void:
 	"Speed: " + str(Player.speed) + "
 	Sprint: " + str(Input.is_action_pressed("sprint")) + "
 	Rotation: " + str(Player.rotation) + "
-	Health: " + str(temp))
+	Health: " + str(Player.health))

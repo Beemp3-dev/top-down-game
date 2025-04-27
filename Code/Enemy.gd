@@ -12,4 +12,5 @@ func _process(delta):
 		position += direction * SPEED * delta
 	
 	if distance_to_player < collide or distance_to_player == collide:
-		InfoChart.temp -= 25
+		Player.health -= 25
+		await get_tree().create_timer(1).timeout

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health
+var health = 100
 var speed = 500
 var sprint = 300
 func _physics_process(_delta): #Movement

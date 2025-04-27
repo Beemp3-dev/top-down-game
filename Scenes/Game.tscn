@@ -1,16 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://85exjavna63y"]
 
-[ext_resource type="Texture2D" uid="uid://1qcn1x1bukst" path="res://Assets/Background/grids-neon-green-aesthetic-0ssuffio4ucj9o0x.jpg" id="1_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://c80wqfx37tekj" path="res://Scenes/debug_arena.tscn" id="1_kldst"]
 [ext_resource type="PackedScene" uid="uid://blu4slftdvq8f" path="res://Scenes/player.tscn" id="3_b2bpf"]
-[ext_resource type="PackedScene" uid="uid://duxetafvuaxef" path="res://Scenes/debug.tscn" id="4_kldst"]
+[ext_resource type="PackedScene" uid="uid://duxetafvuaxef" path="res://Scenes/debug_menu.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://tca4xbttj7e2" path="res://Scenes/enemy.tscn" id="6_7lihs"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="background" type="Sprite2D" parent="."]
-position = Vector2(-3, -2)
-scale = Vector2(-0.660485, 0.689737)
-texture = ExtResource("1_j5yw3")
+[node name="Debug map" parent="." instance=ExtResource("1_kldst")]
+position = Vector2(-809, -93)
 
 [node name="Player" parent="." instance=ExtResource("3_b2bpf")]
 
