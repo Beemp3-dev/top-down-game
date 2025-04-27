@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://duxetafvuaxef"]
+
+[ext_resource type="Script" uid="uid://b4cgjrkmnmwms" path="res://Code/debug/info chart.gd" id="1_axs6p"]
+[ext_resource type="Script" uid="uid://dqkgg1es1clrj" path="res://Code/debug/character info.gd" id="2_5k3ys"]
+
+[sub_resource type="SystemFont" id="SystemFont_kldst"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6fqrn"]
+font = SubResource("SystemFont_kldst")
+font_size = 41
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
+shadow_offset = Vector2(-2.825, 2.62)
+
+[sub_resource type="Gradient" id="Gradient_t88pq"]
+colors = PackedColorArray(0.172549, 0.172549, 0.172549, 1, 0.172549, 0.172549, 0.172549, 0.188235)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h47sb"]
+gradient = SubResource("Gradient_t88pq")
+use_hdr = true
+fill_from = Vector2(0, 0.334862)
+
+[node name="debug" type="Node2D"]
+
+[node name="debug layer" type="CanvasLayer" parent="."]
+script = ExtResource("1_axs6p")
+
+[node name="character" type="Label" parent="debug layer"]
+z_index = 1
+anchors_preset = -1
+anchor_right = 0.179431
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 168.296
+offset_bottom = -372.0
+grow_vertical = 2
+scale = Vector2(0.554303, 0.554303)
+mouse_default_cursor_shape = 2
+text = "Speed:
+Sprint:
+Zoom:
+Health:"
+label_settings = SubResource("LabelSettings_6fqrn")
+script = ExtResource("2_5k3ys")
+metadata/_edit_use_anchors_ = true
+
+[node name="text box" type="TextureRect" parent="debug layer"]
+show_behind_parent = true
+anchors_preset = -1
+anchor_right = 0.202
+anchor_bottom = 1.0
+offset_right = 170.296
+offset_bottom = -211.0
+scale = Vector2(0.578606, 1.48353)
+texture = SubResource("GradientTexture2D_h47sb")
+metadata/_edit_use_anchors_ = true

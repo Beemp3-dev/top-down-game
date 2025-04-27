@@ -18,7 +18,7 @@ config/icon="res://Assets/Misc/icon.svg"
 [autoload]
 
 Player="*res://Code/player.gd"
-InfoChart="*res://Code/info chart.gd"
+InfoChart="*res://Code/debug/character info.gd"
 
 [display]
 

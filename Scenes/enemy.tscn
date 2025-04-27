@@ -16,3 +16,4 @@ shape = SubResource("CircleShape2D_4gyqm")
 
 [node name="Player_sprite" type="Sprite2D" parent="StaticBody2D"]
 texture = ExtResource("1_7k104")
+flip_h = true
