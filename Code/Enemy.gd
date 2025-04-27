@@ -13,4 +13,4 @@ func _process(delta):
 	
 	if distance_to_player < collide or distance_to_player == collide:
 		Player.health -= 25
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(10).timeout
